@@ -96,8 +96,8 @@ def create_app() -> Flask:
   # Separate the the fully qualified module path from the function with a `:`
   pancake = FlaskPancake(
       group_funcs={
-          "user", "my.app.account.utils:get_group_user",
-          "superuser", "my.app.account.utils:get_group_superuser",
+          "user": "my.app.account.utils:get_group_user",
+          "superuser": "my.app.account.utils:get_group_superuser",
       }
   )
   ```
